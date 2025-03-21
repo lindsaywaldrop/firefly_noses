@@ -1,0 +1,59 @@
+Photo,Specimen,Species,Location,Sensillum_type,Olfactory_type,x,y,Number,Comments
+B spp f1_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,mechano,NA,40.244,156.093,1,yellow
+B spp f1_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,mechano,NA,19.145,150.427,2,yellow
+B spp f1_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,mechano,NA,54.115,146.911,3,yellow
+B spp f1_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,mechano,NA,71.697,136.166,4,yellow
+B spp f1_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,mechano,NA,104.713,133.626,5,yellow
+B spp f1_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,mechano,NA,129.524,189.89,6,yellow
+B spp f1_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,mechano,NA,160.195,185.788,7,yellow
+B spp f1_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,mechano,NA,178.168,188.913,8,yellow
+B spp f1_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,mechano,NA,165.47,159.023,9,yellow
+B spp f1_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,mechano,NA,176.801,158.046,10,yellow
+B spp f1_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,mechano,NA,153.162,99.829,11,yellow
+B spp f1_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,mechano,NA,115.849,120.342,12,yellow
+B spp f1_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,mechano,NA,55.678,108.62,13,yellow
+B spp f1_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,mechano,NA,22.466,110.183,14,yellow
+B spp f1_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,mechano,NA,72.674,182.076,15,yellow
+B spp f1_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,mechano,NA,82.247,53.333,16,yellow
+B spp f1_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,mechano,NA,101.001,27.546,17,yellow
+B spp f1_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,mechano,NA,119.756,60.757,18,yellow
+B spp f1_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,mechano,NA,137.729,82.442,19,yellow
+B spp f1_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,mechano,NA,161.368,92.991,20,yellow
+B spp f1_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,mechano,NA,119.951,23.639,21,yellow
+B spp f1_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,mechano,NA,6.447,110.085,22,yellow
+B spp f1_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,mechano,NA,152.381,80.586,23,yellow
+B spp f1_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,mechano,NA,134.505,159.414,24,yellow
+B spp f1_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,mechano,NA,28.425,172.308,25,yellow
+B spp f1_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,mechano,NA,95.531,191.062,26,yellow
+B spp f1_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,mechano,NA,164.396,126.593,27,yellow
+B spp f1_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,mechano,NA,75.897,75.604,28,yellow
+B spp f1_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,mechano,NA,142.418,25.788,29,yellow
+B spp f1_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,mechano,NA,99.634,63.004,30,yellow
+NA,LACM Ent 574190,Bicellonycha sp,F2,NA,NA,NA,NA,NA,"Poor coating, no useable material"
+NA,LACM Ent 574190,Bicellonycha sp,F3,NA,NA,NA,NA,NA,"Poor coating, no useable material"
+NA,LACM Ent 574190,Bicellonycha sp,F4,NA,NA,NA,NA,NA,"Poor coating, no useable material"
+NA,LACM Ent 574190,Bicellonycha sp,F5,NA,NA,NA,NA,NA,"Poor coating, no useable material"
+NA,LACM Ent 574190,Bicellonycha sp,F6,NA,NA,NA,NA,NA,"Poor coating, no useable material"
+NA,LACM Ent 574190,Bicellonycha sp,F7,NA,NA,NA,NA,NA,"Poor coating, no useable material"
+NA,LACM Ent 574190,Bicellonycha sp,F8,NA,NA,NA,NA,NA,"Poor coating, no useable material"
+NA,LACM Ent 574190,Bicellonycha sp,F9,NA,NA,NA,NA,NA,"Poor coating, no useable material"
+B spp f1L_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,olfactory,trichoid,76.777,113.7,1,pink
+B spp f1L_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,olfactory,trichoid,65.055,101.099,2,pink
+B spp f1L_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,olfactory,trichoid,54.799,80.586,3,pink
+B spp f1L_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,olfactory,trichoid,55.385,48.352,4,pink
+B spp f1L_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,olfactory,trichoid,101.978,44.835,5,pink
+B spp f1L_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,olfactory,trichoid,141.832,63.883,6,pink
+B spp f1L_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,olfactory,trichoid,135.971,44.835,7,pink
+B spp f1L_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,olfactory,trichoid,133.919,27.839,8,pink
+B spp f1L_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,olfactory,trichoid,132.747,11.429,9,pink
+B spp f1L_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,olfactory,trichoid,104.322,10.842,10,pink
+B spp f1L_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,olfactory,trichoid,38.388,112.821,11,pink
+B spp f1L_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,olfactory,trichoid,7.033,75.311,12,pink
+B spp f1L_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,olfactory,trichoid,36.923,88.498,13,pink
+B spp f1L_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,olfactory,trichoid,93.48,99.048,14,pink
+B spp f1L_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,olfactory,trichoid,93.773,77.656,15,pink
+B spp f1L_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,olfactory,trichoid,111.941,87.326,16,pink
+B spp f1L_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,olfactory,trichoid,87.619,141.832,17,pink
+B spp f1L_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,hygro-thermo,NA,77.949,94.652,1,blue
+B spp f1L_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,hygro-thermo,NA,131.282,97.582,2,blue
+B spp f1L_xy.tif,LACM Ent 574190,Bicellonycha sp,F1,hygro-thermo,NA,126.007,113.407,3,blue

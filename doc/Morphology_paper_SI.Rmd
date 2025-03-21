@@ -1,0 +1,208 @@
+---
+title: Supplemental Information to "Sexual signaling strategy shows no influence on the morphometrics of firefly's primary olfactory organs"
+date: "`r Sys.Date()`"
+output: 
+  bookdown::pdf_document2:
+    includes: 
+      in_header: header_SI.tex
+    number_sections: false
+    toc: false
+    keep_tex: yes
+bibliography: references.bib
+csl: zootaxa.csl
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
+
+# If you would like to regenerate figures, set the next line to TRUE:
+regen_figs <- FALSE
+# If you would like to rerun all analyses, set the next line to TRUE:
+rerun_analyses <- FALSE
+# Saves figures during knit if TRUE: 
+save_figs <- FALSE
+
+# Loads required packages
+library(knitr)
+library(phytools)
+library(ggplot2)
+library(patchwork)
+library(RColorBrewer)
+library(dplyr)
+library(janitor)
+library(ggtree)
+library(cowplot)
+library(ggrepel)
+library(viridis)
+
+dir.create("../results/", showWarnings = F)
+dir.create("../results/plots", showWarnings = F)
+
+signal_colors <- brewer.pal(3, "Set2")
+sex_colors <- brewer.pal(8, "Dark2")[c(2,3,8)]
+sensillum_colors <- c("lightcoral", "steelblue1")
+olfactory_colors <- viridis(3)
+```
+
+```{r load-data, include=FALSE}
+# Load custom functions:
+source("./src/data-handling-fxns.R")
+
+if(rerun_analyses){
+  # Rerun analysis if rerun_analyses is true
+  source("./src/paper_analysis.R")
+  analysis_date <- Sys.Date()
+} else {
+  analysis_date <- "2024-11-14"
+}
+
+# Loads specimen list
+specimen_data <- load_specimen_data(include_unmeasured = F)
+
+# Loads analyzed width, length data: 
+morpho_data <- load_morphometric_data(specimen_data, analysis_date)
+
+# Loads density, mean dist, count data:
+all_xy <- load_xy_data(analysis_date)
+all_xy <- estimate_counts(specimen_data, morpho_data, all_xy)
+all_xy$density <- all_xy$density*1e6
+# Reshapes data for plotting counts: 
+all_segs_olf <- all_xy[all_xy$sensillum_type == "olfactory" &
+                                    all_xy$olfactory_type == "all" , ]  %>%
+    group_by(species, signal) %>%
+    summarise(mean_est = mean(est_seg_count, na.rm = T), 
+              sd_est  = sd(est_seg_count, na.rm = T))
+
+
+```
+
+```{r arrange-tree, message=FALSE, warning=FALSE, include=FALSE}
+# Adding a phylogenetic tree to the analysis
+
+# Please see MakeATree.R script for more information on how this tree was constructed.
+if(rerun_analyses) source("./src/MakeATree.R")
+
+# Read the tree file from MakeATree.R in: 
+bug_tree <- ggtree::read.tree("./data/trees/Treefor26species.tree") 
+bug_tree$tip.label <- sub("_", " ", bug_tree$tip.label)
+
+# Setup signal and count per segment data frame to join with bug tree:
+specimen_list <- load_specimen_data(F, F)
+specimen_list$species <- factor(specimen_list$species)
+specimen_list$signal <- factor(specimen_list$signal, 
+                               levels = c("visual", "chemical", "both"))
+signal_data <- unique(specimen_list[,c("species", "signal")])
+colnames(signal_data) <- c("label", "signal")
+signal_data$label <- as.character(signal_data$label)
+temp_all_segs_olf <- all_segs_olf[,c("species", "mean_est")]
+colnames(temp_all_segs_olf) <- c("label", "mean_est")
+signal_data_2 <- left_join(signal_data, temp_all_segs_olf, by = "label")
+
+# Join signal data to bug tree for plotting:
+bug_tree_2 <- full_join(bug_tree, signal_data_2, by = "label")
+```
+
+
+```{r run-stats-figs, message=FALSE, warning=FALSE, include=FALSE}
+# Testing the mean distances between hairs, hair counts, hair densities, and hair fractions with a phylogenetically corrected ANOVA. Each test line will generate the phylo ANOVA, a regular ANOVA (uncorrected), and a plot that shows the comparison. Many of the plots are used below in the manuscript. The p-values from the phylo ANOVAs are compiled in the tables below.  
+source("./src/paper_run_stats.R")
+```
+
+```{r tab-code, include=FALSE}
+# This code arranges the p-values of the phylo ANOVAs into table format
+source("./src/paper_setup_SI_tables.R")
+```
+
+# Contents
+
+Figures: none
+
+Tables: SI Table 1 through SI Table 6
+
+# Information about reproducibility of figures and statistics
+
+Figures, tables, and statistical values are fully reproducible in the main manuscript as well as the supplemental information using RStudio version 2024.12.1+563 and R version 4.4.1 or higher from a R project in the Github repository: https://github.com/lindsaywaldrop/firefly-morphology. All data, code, and images are available publicly in this repository. Instructions for directly reproducing this project are included in the repository. 
+
+# Antennal morphometrics are independent of body size
+
+```{r include=FALSE}
+resized_means <- morpho_data %>%
+  group_by(species, signal, measurement_type, sensillum_type, body_length) %>%
+  summarize(means = mean(value, na.rm=T), sds = sd(value, na.rm=T))
+
+resized_width_olf_anova <- anova(lm(means~body_length, data = resized_means[resized_means$measurement_type == "sensillum width med" & resized_means$sensillum_type == "olfactory",]))
+resized_length_olf_anova <- anova(lm(means~body_length, data = resized_means[resized_means$measurement_type == "sensillum length" & resized_means$sensillum_type == "olfactory",]))
+resized_ant_length_anova <- anova(lm(means~body_length, data = resized_means[resized_means$measurement_type == "antenna length",]))
+resized_ant_width_anova <- anova(lm(means~body_length, data = resized_means[resized_means$measurement_type == "segment width",]))
+
+```
+Data in the manuscript are not normalized by body length because no significant relationship with body length was found among the morphometric measurements using one-way ANOVAs. This includes body length with
+antenna length ($F(`r resized_ant_length_anova$Df[1]`, `r resized_ant_length_anova$Df[2]`) = `r signif(resized_ant_length_anova[[4]][1], digits = 3)`$, $p = `r signif(resized_ant_length_anova[[5]][1], digits = 1)`$), 
+flagellar segment width ($F(`r resized_ant_width_anova$Df[1]`, `r resized_ant_width_anova$Df[2]`) = `r signif(resized_ant_width_anova[[4]][1], digits = 3)`$, $p = `r signif(resized_ant_width_anova[[5]][1], digits = 1)`$),
+olfactory sensilla width ($F(`r resized_width_olf_anova$Df[1]`, `r resized_width_olf_anova$Df[2]`) = `r signif(resized_width_olf_anova[[4]][1], digits = 3)`$, $p = `r signif(resized_width_olf_anova[[5]][1], digits = 1)`$), and
+olfactory sensilla length ($F(`r resized_length_olf_anova$Df[1]`, `r resized_length_olf_anova$Df[2]`) = `r signif(resized_length_olf_anova[[4]][1], digits = 3)`$, $p = `r signif(resized_length_olf_anova[[5]][1], digits = 1)`$).
+
+# Additional values from statistical comparisons
+
+In the main manuscript's Tables 2 and 3, p-values were presented as a result of statistical comparisons. Here are additional values presented in Tables:
+
+ - SI Table \@ref(tab:tab-signal-all): comparison values for all sensilla by signal, corresponding to comparisons in Table 2 and Fig. 3c,d. 
+ - SI Table \@ref(tab:tab-signal-mechano): comparison values for mechanosensory sensilla by signal, corresponding to comparisons in Table 2, Fig. 3a-d, and Fig. 6a,b.
+ - SI Table \@ref(tab:tab-signal-olfactory): comparison values for olfactory sensilla by signal, corresponding to comparisons in Table 2, Fig. 3a-d, Fig. 4a, and Fig. 6 a,b.
+ - SI Table \@ref(tab:tab-sex-all): comparison values for all sensilla by sex, corresponding to comparisons in Table 3 and Fig. 7c,d. 
+ - SI Table \@ref(tab:tab-sex-mechano): comparison values for mechanosensory sensilla by sex, corresponding to comparisons in Table 3 and Fig. 7a-d.
+ - SI Table \@ref(tab:tab-sex-olfactory): comparison values for olfactory sensilla by sex, corresponding to comparisons in Table 3 and Fig. 7a,b. 
+ 
+ 
+ 
+```{r tab-signal-all, message=FALSE, warning=FALSE, echo=FALSE, fig.width=6.5}
+kable(tab_signal_all_df, "simple",
+      digits = 3, align = "c",
+      #row.names = tab_row_names,
+      col.names = tab_col_signal_names,
+      caption = "Phylogenetically corrected comparisons of species means against signal type for all sensilla. Statistical scores ($n$, sample size; $F$-values; $p$-values) included for each comparsion of sensillum width, sensillum length, sensilla density, mean distances between sensilla, mean count of sensilla per segment, and mean fraction of sensilla.")
+```
+
+
+```{r tab-signal-mechano, message=FALSE, warning=FALSE, echo=FALSE, fig.width=6.5}
+kable(tab_signal_mechano_df, "simple",
+      digits = 3, align = "c",
+      #row.names = tab_row_names,
+      col.names = tab_col_signal_names,
+      caption = "Phylogenetically corrected comparisons of species means against signal type for mechanosensory sensilla. Statistical scores ($n$, sample size; $F$-values; $p$-values) included for each comparsion of sensillum width, sensillum length, sensilla density, mean distances between sensilla, mean count of sensilla per segment, and mean fraction of sensilla.")
+```
+
+```{r tab-signal-olfactory, message=FALSE, warning=FALSE, echo=FALSE, fig.width=6.5}
+kable(tab_signal_olfactory_df, "simple",
+      digits = 3, align = "c",
+      #row.names = tab_row_names,
+      col.names = tab_col_signal_names,
+      caption = "Phylogenetically corrected comparisons of species means against signal type for olfactory sensilla. Statistical scores ($n$, sample size; $F$-values; $p$-values) included for each comparsion of sensillum width, sensillum length, sensilla density, mean distances between sensilla, mean count of sensilla per segment, and mean fraction of sensilla.")
+```
+
+
+```{r tab-sex-all, message=FALSE, warning=FALSE, echo=FALSE, fig.width=6.5}
+kable(tab_sex_all_df, "simple",
+      digits = 3, align = "c",
+      #row.names = tab_row_names,
+      col.names = tab_col_sex_names,
+      caption = "Phylogenetically corrected comparisons of species means against sex type for all sensilla. Statistical scores ($n$, sample size; $F$-values; $p$-values) included for each comparsion of sensillum width, sensillum length, sensilla density, mean distances between sensilla, mean count of sensilla per segment, and mean fraction of sensilla.")
+```
+
+```{r tab-sex-mechano, message=FALSE, warning=FALSE, echo=FALSE, fig.width=6.5}
+kable(tab_sex_mechano_df, "simple",
+      digits = 3, align = "c",
+      #row.names = tab_row_names,
+      col.names = tab_col_sex_names,
+      caption = "Phylogenetically corrected comparisons of species means against sex type for mechanosensory sensilla. Statistical scores ($n$, sample size; $F$-values; $p$-values) included for each comparsion of sensillum width, sensillum length, sensilla density, mean distances between sensilla, mean count of sensilla per segment, and mean fraction of sensilla.")
+```
+
+```{r tab-sex-olfactory, message=FALSE, warning=FALSE, echo=FALSE, fig.width=6.5}
+kable(tab_sex_olfactory_df, "simple",
+      digits = 3, align = "c",
+      #row.names = tab_row_names,
+      col.names = tab_col_sex_names,
+      caption = "Phylogenetically corrected comparisons of species means against sex type for mechanosensory sensilla. Statistical scores ($n$, sample size; $F$-values; $p$-values) included for each comparsion of sensillum width, sensillum length, sensilla density, mean distances between sensilla, mean count of sensilla per segment, and mean fraction of sensilla.")
+```
