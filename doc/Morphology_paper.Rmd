@@ -56,11 +56,11 @@ knitr::opts_chunk$set(echo = FALSE)
 knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
 
 # If you would like to regenerate figures, set the next line to TRUE:
-regen_figs <- TRUE
+regen_figs <- FALSE
 # If you would like to rerun all analyses, set the next line to TRUE:
-rerun_analyses <- TRUE
+rerun_analyses <- FALSE
 # Saves figures during knit if TRUE: 
-save_figs <- TRUE
+save_figs <- FALSE
 
 # Loads required packages
 library(knitr)
@@ -92,7 +92,7 @@ if(rerun_analyses){
   source("./src/paper_analysis.R")
   analysis_date <- Sys.Date()
 } else {
-  analysis_date <- "2024-11-14"
+  analysis_date <- "2025-03-11"
 }
 
 # Loads specimen list

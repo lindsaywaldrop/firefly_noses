@@ -55,7 +55,7 @@ if(rerun_analyses){
   source("./src/paper_analysis.R")
   analysis_date <- Sys.Date()
 } else {
-  analysis_date <- "2024-11-14"
+  analysis_date <- "2025-03-21"
 }
 
 # Loads specimen list
