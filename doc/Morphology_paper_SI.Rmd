@@ -1,8 +1,6 @@
 ---
 title: Supplemental Information to "Sexual signaling strategy shows no influence on the morphometrics of firefly's primary olfactory organs"
-author: 
- - Lindsay D. Waldrop^1^, Daniel Mejia^1^, Noelle Clark^1,2* ^, Ricardo Espanoza Hernandez^1^,
- - Redah Jessani^1^
+
 date: "`r Sys.Date()`"
 output: 
   bookdown::pdf_document2:
@@ -126,7 +124,7 @@ Tables: SI Table 1 through SI Table 6
 
 # Information about reproducibility of figures and statistics
 
-Figures, tables, and statistical values are fully reproducible in the main manuscript as well as the supplemental information using RStudio version 2024.12.1+563 and R version 4.4.1 or higher from a R project in the Github repository: https://github.com/lindsaywaldrop/firefly-noses. All data, code, and images are available publicly in this repository. Instructions for directly reproducing this project are included in the repository. 
+Figures, tables, and statistical values are fully reproducible in the main manuscript as well as the supplemental information using RStudio version 2024.12.1+563 and R version 4.4.1 or higher. All data, code, and images are available publicly in this repository. Instructions for directly reproducing this project are included in the repository. 
 
 # Antennal morphometrics are independent of body size
 

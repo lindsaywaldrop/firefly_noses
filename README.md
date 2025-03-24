@@ -19,7 +19,7 @@ This repository is organized in the following way:
 
 ## Required software and packages
 
-Figures, tables, and statistical values are fully reproducible in the main manuscript as well as the supplemental information using RStudio version 2024.12.1+563 and R version 4.4.1 or higher from a R project in the Github repository. 
+Figures, tables, and statistical values are fully reproducible in the main manuscript as well as the supplemental information using RStudio version 2024.12.1+563 and R version 4.4.1 or higher from the R project file. 
 
 The following R packages are available on CRAN and required to run this code: 
 
@@ -75,6 +75,3 @@ To reproduce the analysis independently from raw measurement data, in line 54 of
 
 You may also regenerate and save each figure as an independent file by changing lines 52 and 56 to read `TRUE`.
 
-## Contact
-
-For additional questions, problems, or concerns, please contact Lindsay Waldrop at `waldrop@chapman.edu` or leave an issue on this repository. 
