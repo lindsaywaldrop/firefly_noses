@@ -7,15 +7,15 @@ output:
     toc: false
     keep_tex: yes
 bibliography: references.bib
-csl: zootaxa.csl
+csl: procb.csl
 ---
 
-Running title: Sex signaling effects on firefly antenna 
 
+__Running title:__ Sex signaling effects on firefly antenna 
 
 # Abstract
 
-Fireflies (beetles in the family Lampyridae) are known for the development of bioluminescent organs which flash or glow to mediate sexual reproduction in many species, affecting the eye size of species which employ this signaling strategy. Other species of fireflies have secondarily reverted to using olfactory signals (pheromones) to attract mates. In this study, we investigate the primary olfactory organ of fireflies (antenna) to determine whether the reversal to chemical signaling has similarly affected the morphometrics of this organ. We hypothesize that species using chemical signaling would have greater densities and counts of olfactory sensilla responsible for capturing pheromones, as well as longer and wider olfactory sensilla, compared to species using visual signals (flashing or glowing). We also hypothesize that male animals would have greater number and densities of olfactory sensilla as compared to female animals. We find that neither signaling strategy nor sex has a significant relationship with any morphometric measurement examined. The combination of sex and signal strategy was also not a significant predictor of any morphometric measurement. Olfactory sensilla arrays are likely used for a variety of tasks not linked to sexual signaling strategies. The form and arrangement of olfactory sensilla could represent the smallest, most compact, and inexpensive way to create and maintain these arrays. Consistent with previous work, no differences between male and female animals suggest that females possess the same sensilla that react to sex pheromones but either they are not physiologically active or these signals are ignored.
+Fireflies (family Lampyridae) are known for their bioluminescent organs which flash or glow to mediate sexual reproduction in many species. Other species of fireflies have secondarily reverted to using olfactory signals (pheromones) to attract mates. In this study, we investigate the primary olfactory organ of fireflies (antenna) to determine whether the reversal to chemical signaling has affected the morphometrics of antennae and its olfactory sensilla. We hypothesize that species using chemical signaling and male animals would have greater densities and counts of olfactory sensilla responsible for capturing pheromones, as well as longer and wider olfactory sensilla, compared to species using visual signals. We find that neither signaling strategy, sex, nor their combination have significant relationships with any morphometric measurement examined. Olfactory sensilla arrays are likely used for a variety of tasks not linked to sexual signaling strategies. The form and arrangement of olfactory sensilla could represent the smallest, most compact, and inexpensive way to create and maintain these arrays. Consistent with previous work, no differences between male and female animals suggest that females possess the same sensilla that react to sex pheromones but either they are not physiologically active or these signals are ignored. 
 
 ## Keywords
 
@@ -32,7 +32,7 @@ regen_figs <- FALSE
 # If you would like to rerun all analyses, set the next line to TRUE:
 rerun_analyses <- FALSE
 # Saves figures during knit if TRUE: 
-save_figs <- FALSE
+save_figs <- TRUE
 
 # Loads required packages
 library(knitr)
@@ -136,7 +136,7 @@ Across many species of insects employing chemical signaling, many have longer an
  
 ## Antennae of lampyrid beetles
  
-The antennae of lampyrid beetles are complex structures that serve many functions, including the detection of chemical, thermal, and tactile cues. Fireflies have two antennae, each of which are made up of multiple small segments, or antennomeres, each bearing many sensory sensilla (Fig. \@ref(fig:sem-fig)). Fourteen sensilla morphotypes on the antennae of the Lampyridae beetles have been identified, which are organized into four functional groupings: mechanoreceptors, chemoreceptors, hygroreceptors, and thermoreceptors [@schneider1964insect; @keil1984mechanosensitive; @steinbrecht1987functional; @keil1997functional; @yao2005chemosensory; @tichy2010insect; @chakilam2020morphological; @geerthana2023sensory; @pacheco2024antennal]. @schneider1964insect presents an overview of these sensilla types and their associated functions for insects, and @pacheco2024antennal presents a similar overview focusing on fireflies. 
+The antennae of lampyrid beetles are complex structures that serve many functions, including the detection of chemical, thermal, and tactile cues. Fireflies have two antennae, each of which are made up of multiple small segments, or antennomeres, each bearing many sensory sensilla (Fig. \@ref(fig:bug-tree)a, b). Fourteen sensilla morphotypes on the antennae of the Lampyridae beetles have been identified, which are organized into four functional groupings: mechanoreceptors, chemoreceptors, hygroreceptors, and thermoreceptors [@schneider1964insect; @keil1984mechanosensitive; @steinbrecht1987functional; @keil1997functional; @yao2005chemosensory; @tichy2010insect; @chakilam2020morphological; @geerthana2023sensory; @pacheco2024antennal]. Schneider @schneider1964insect presents an overview of these sensilla types and their associated functions for insects, and Pacheco et al. @pacheco2024antennal presents a similar overview focusing on fireflies. 
  
 Within chemoreceptors, olfactory sensilla receive many different types of chemical vapor signals in the air (odorants) and can be used for the detection of plant volatiles, aggregation pheromones, sex pheromones, and more [@keil1984mechanosensitive; @lopes2002fine; @pacheco2024antennal]. Olfactory sensilla are typically shorter than other types (such as mechanosensory sensilla) and by necessity contain pores. Pores allow for air containing odorants to be exposed to the outer dendritic segments that transduce signals into action potentials. Other aspects of olfactory sensilla, such as pore size and distribution, length, width, or aspect ratio, can differ between sensilla types and across species [@faucheux2017comparative; @pacheco2024antennal]. There are multiple types of olfactory sensilla, yet to date, only basiconica sensilla have been identified as responsive to sex pheromones through electrophysiology [@lower2023identification].
  
@@ -148,7 +148,7 @@ Previous work has shown that the shape, size, and arrangement of sensilla on the
 
 It is generally assumed that a greater surface area of chemosensory structure or a larger number of chemoreceptor sensilla would be associated with sex pheromone signaling, driven primarily by sexual selection. A greater sensory surface area or number would be required to detect the rare signal of sex pheromones. Previous works have found that diurnal (chemical signalers) fireflies have longer antennae and greater sensilla densities than nocturnal species (visual signalers) and diurnal males have a greater number of total chemosensilla than diurnal females [@stanger2018evolution; @pacheco2024antennal].
 
-However, the connection between sexual dimorphic antennae and rare odorant signals is not as clear with other insects that use pheromones to mediate reproduction. Moths are a common example of insects with antennae that are variably sexually dimorphic, with the males of many species having large, plumose antennae compared to the smaller, less dense antennae of females. Although it is assumed that this dimorphism is associated with properties of female pheromones or population density, @symonds2012pheromone found no such link. @johnson2022movement found that greater dimorphism was linked to increased male competition for females, rather than factors affecting the rarity of sex pheromone signals. Body size seems to be the most significant correlate for plumose male antenna in moths [@symonds2012pheromone; @javoivs2019comparative; @johnson2022movement]. 
+However, the connection between sexual dimorphic antennae and rare odorant signals is not as clear with other insects that use pheromones to mediate reproduction. Moths are a common example of insects with antennae that are variably sexually dimorphic, with the males of many species having large, plumose antennae compared to the smaller, less dense antennae of females. Although it is assumed that this dimorphism is associated with properties of female pheromones or population density, Symonds et al. @symonds2012pheromone found no such link. Johnson et al. @johnson2022movement found that greater dimorphism was linked to increased male competition for females, rather than factors affecting the rarity of sex pheromone signals. Body size seems to be the most significant correlate for plumose male antenna in moths [@symonds2012pheromone; @javoivs2019comparative; @johnson2022movement]. 
 
 Furthermore, there is a potential trade off with increased surface area and the density of sensory structures. A greater number of sensilla imparts greater surface area available to capture odorant molecules, but because of the tendency of small-scale fluid flow to travel around, rather than through, hair arrays, antennae with denser sensilla arrays often require active ventilation or more specialized structures to effectively use the additional sensory surface area provided by more complex structures [@Loudon2000; @loudon2005divergence; @waldrop2016bluehermit; @waldrop2018entmodel; @jaffar2020insect; @nakata2024olfactory]. Increased number or density of sensilla therefore could incur significant energetic costs or not impart a greater effective sensory area compared to sparser arrays. 
 
@@ -163,7 +163,7 @@ We hypothesize that visual signalers will have a reduction in the width and leng
 
 ## Materials 
 
-Individual samples of species listed in Table \@ref(tab:bug-tab) were acquired from the entomology collection of the Los Angeles County Natural History Museum, representing 32 individual animals and 26 species. Each specimen was destructively sampled by the removal of an entire antenna. Only specimens with intact antennae were sampled, although during sampling and transport to Chapman University, some segments were lost. Each specimen was photographed to recover body length and sex. Two specimens lacked abdominal segments and were unable to be sexed, and these are marked in Table \@ref(tab:bug-tab) as "NA." 
+Individual samples of species were acquired from the entomology collection of the Los Angeles County Natural History Museum, representing 32 individual animals and 26 species (see supplementary material for complete list). Each specimen was destructively sampled by the removal of an entire antenna. Only specimens with intact antennae were sampled, although during sampling and transport to Chapman University, some segments were lost. Each specimen was photographed to recover body length and sex. Two specimens lacked abdominal segments and were unable to be sexed, and these are marked as "NA" or "not avaiable." 
 
 Each species was categorized by mating strategy: visual (primarily nocturnal species using light signals to mediate long-distance mate attraction), chemical (primarily diurnal species using pheromones to mediate long-distance mate attraction), or both (either nocturnal or diurnal species using some combination of pheromones and light to mediate long-distance mate attraction). Natural history required to determine category for each species was collected from a variety of published sources [@ohba1983studies; @carlson1985flash; @ohba2004flash; @stanger2007phylogeny; @lewis2008flash; @stanger2015flash; @faust2017fireflies; @stanger2018evolution].
 
@@ -175,7 +175,6 @@ Each antenna was mounted separately to SEM tape using light pressure with forcep
 SEM images were taken on a Sigma 300 Electron microscope by Zeiss (Carl Zeiss Microscopy, LLC White Plains, NY). Specimen samples were coated with a thin layer of gold/palladium (Au/Pd 80/20%) using a sputter coater model SC7620 by Quorum. Argon gas was used in the vacuum chamber (Zero Grade: 99.999%) fitted with a two-stage regulator with pressure around 5-10 psi (0.5 bar).  The sputter coater was run for 45 s at 18 mA to achieve a thickness of about 3 -- 4 nm. Depositing conductive thin films helps inhibit "charging," reduces thermal damage, and enhances secondary electron emission for better imaging. The SEM operating voltage was maintained within 10 -- 25 kV, and the SE2 detector was used with a WD of 10.5 mm. Electron micrographs were recorded and processed using the SmartSEM imaging software provided by Zeiss.  
 
 SEMs of each specimen were taken of the entire antenna and individually of the pedicle and each flagellar segment. SEMs of each flagellar segment were taken to capture the entire segment in one view and a higher-magnification view to focus on a cluster of individual sensilla.
-
 
 ## Morphometric measurements
 
@@ -195,11 +194,16 @@ Sensillum arrangements were collected by digitizing the two-dimensional location
 
 ## Statistical analysis
 
-To evaluate comparisons based on signaling strategy, species means were calculated separately for mechanosensory sensilla,  olfactory sensilla, and all sensilla. Combined visual/chemical signaling species (*Phausis reticulata* and *Microphotus angustus*) were grouped with chemical signalers for the purpose of statistical testing. A phylogenetically corrected ANOVA in the *phytools* package [@phytools] in R version 4.4.1 [@R] was performed using simulation-based $p$-value calculations with pairwise posthoc test using Holm method for each comparison using a reconstructed tree of Lampyridae (Fig.~\@ref(fig:bug-tree)) based on @martin2019higher and @stanger2015flash.  No comparison was significant at $\alpha < 0.05$. Table \@ref(tab:signal-ptable) provides a summary of $p$-values. 
+To evaluate comparisons based on signaling strategy, species means were calculated separately for mechanosensory sensilla,  olfactory sensilla, and all sensilla. Combined visual/chemical signaling species (*Phausis reticulata* and *Microphotus angustus*) were grouped with chemical signalers for the purpose of statistical testing. A phylogenetically corrected ANOVA in the *phytools* package [@phytools] in R version 4.4.2 [@R] was performed using simulation-based $p$-value calculations with pairwise posthoc test using Holm method for each comparison using a reconstructed tree of Lampyridae (Fig. \@ref(fig:bug-tree)c) based on Martin et al. @martin2019higher and Stanger-Hall & Lloyd  @stanger2015flash.  No comparison was significant at $\alpha < 0.05$. Table \@ref(tab:signal-ptable) provides a summary of $p$-values. 
 
 To evaluate comparisons based on sex, specimen means were calculated separately for mechanosensory sensilla, olfactory sensilla, and all sensilla. One-way ANOVAs were performed in R version 4.4.1 [@R] for each comparison on specimen means. No comparison was significant at $\alpha < 0.05$. Table \@ref(tab:sex-ptable) provides a summary of $p$-values. 
 
-Measurements were not normalized to body length because each measure was determined to be independent of body length through linear regression. Each statistical analysis was repeated taking body length into account and there were no changes in significance for any measure. Additional statistical values can be found in Supplemental Information. 
+Measurements were not normalized to body length because each measure was determined to be independent of body length through linear regression. Each statistical analysis was repeated taking body length into account and there were no changes in significance for any measure. Additional statistical values can be found in supplementary material. 
+
+
+## Data Availability
+
+All measurements and code necessary to reproduce the phylogenetic tree, calculations, figures, and statistical analyses are available on Github: (redacted for review). 
 
 
 # Results
@@ -257,7 +261,7 @@ est_complete_counts_species$signal[est_complete_counts_species$signal == "both"]
 
 ```
 
-Table \@ref(tab:signal-ptable) presents $p$-values and sample sizes of phylogenetically corrected ANOVAs for various comparisons of sensilla against signaling strategy. Full test statistics can be found in Supplemental Information. Figure \@ref(fig:signal-plots) presents results for species means with ranges divided by signaling strategy. Both olfactory and mechanosensory sensilla share similar widths. Species mean olfactory sensillum widths are 
+Table \@ref(tab:signal-ptable) presents $p$-values and sample sizes of phylogenetically corrected ANOVAs for various comparisons of sensilla against signaling strategy. Full test statistics can be found in supplementary material. Figure \@ref(fig:signal-plots) presents results for species means with ranges divided by signaling strategy. Both olfactory and mechanosensory sensilla share similar widths. Species mean olfactory sensillum widths are 
 $`r signif(mean_width_signal$means[mean_width_signal$sensillum_type == "olfactory" & mean_width_signal$signal == "visual"], digits = 3)` \pm `r signif(mean_width_signal$sds[mean_width_signal$sensillum_type == "olfactory" & mean_width_signal$signal == "visual"], digits = 1)` ~\mu$m for visual signalers, 
 $`r signif(mean_width_signal$means[mean_width_signal$sensillum_type == "olfactory" & mean_width_signal$signal == "chemical"], digits = 3)` \pm `r signif(mean_width_signal$sds[mean_width_signal$sensillum_type == "olfactory" & mean_width_signal$signal == "chemical"], digits = 1)` ~\mu$m for chemical signalers, and 
 $`r signif(mean_width_signal$means[mean_width_signal$sensillum_type == "olfactory" & mean_width_signal$signal == "both"], digits = 3)` \pm `r signif(mean_width_signal$sds[mean_width_signal$sensillum_type == "olfactory" & mean_width_signal$signal == "both"], digits = 1)` ~\mu$m for species displaying both strategies with no significance between means (Fig. \@ref(fig:signal-plots)a). Similar widths were found for mechanosensory sensilla across species 
@@ -286,9 +290,8 @@ $(`r signif(mean_counts_signal$means[mean_counts_signal$sensillum_type == "olfac
 $(`r signif(mean_counts_signal$means[mean_counts_signal$sensillum_type == "olfactory" & mean_counts_signal$signal == "chemical"]/10e7, digits = 3)` \pm `r signif(mean_counts_signal$sds[mean_counts_signal$sensillum_type == "olfactory" & mean_counts_signal$signal == "chemical"]/10e7, digits = 1)`) \times 10^8$, and 
 $(`r signif(mean_counts_signal$means[mean_counts_signal$sensillum_type == "olfactory" & mean_counts_signal$signal == "both"]/10e7, digits = 3)` \pm `r signif(mean_counts_signal$sds[mean_counts_signal$sensillum_type == "olfactory" & mean_counts_signal$signal == "both"]/10e7, digits = 1)`) \times 10^8$ sensilla for visual, chemical, and combined signaling, respectively. When mean sensilla counts per segment were extended to estimate the total number of sensilla on an antenna for complete specimens, the mean number of sensilla was $(`r signif(mean(est_complete_counts_species$mean_total[est_complete_counts_species$signal == "visual"])/10e8, digits = 3)` \pm `r signif(sd(est_complete_counts_species$mean_total[est_complete_counts_species$signal == "visual"])/10e8, digits = 1)`) \times 10^9$ for visual signalers and $(`r signif(mean(est_complete_counts_species$mean_total[est_complete_counts_species$signal == "chemical"])/10e8, digits = 3)` \pm `r signif(sd(est_complete_counts_species$mean_total[est_complete_counts_species$signal == "chemical"])/10e8, digits = 1)`) \times 10^9$ for chemical signalers. 
 
-The type of olfactory sensilla were also not different between signaling strategies; Fig. \@ref(fig:trichoid-fig)a presents comparisons of mean number of sensilla per segment. Mean numbers of basiconica sensilla per segment were $(`r signif(mean(mean_counts_olf_signal$means[mean_counts_olf_signal$olfactory_type == "basiconica" & mean_counts_olf_signal$signal == "visual"])/1e7, digits = 3)` \pm `r signif(sd(mean_counts_olf_signal$means[mean_counts_olf_signal$olfactory_type == "basiconica" & mean_counts_olf_signal$signal == "visual"])/1e7, digits = 1)`) \times 10^8$ and $(`r signif(mean(mean_counts_olf_signal$means[mean_counts_olf_signal$olfactory_type == "basiconica" & mean_counts_olf_signal$signal == "chemical"])/1e8, digits = 3)` \pm `r signif(sd(mean_counts_olf_signal$means[mean_counts_olf_signal$olfactory_type == "basiconica" & mean_counts_olf_signal$signal == "chemical"])/1e8, digits = 1)`) \times 10^9$ for visual and chemical signalers, respectively. For trichodea sensilla, the means were $(`r signif(mean(mean_counts_olf_signal$means[mean_counts_olf_signal$olfactory_type == "trichoid" & mean_counts_olf_signal$signal == "visual"])/1e7, digits = 3)` \pm `r signif(sd(mean_counts_olf_signal$means[mean_counts_olf_signal$olfactory_type == "trichoid" & mean_counts_olf_signal$signal == "visual"])/1e7, digits = 1)`) \times 10^8$ and $(`r signif(mean(mean_counts_olf_signal$means[mean_counts_olf_signal$olfactory_type == "trichoid" & mean_counts_olf_signal$signal == "chemical"])/1e8, digits = 3)` \pm `r signif(sd(mean_counts_olf_signal$means[mean_counts_olf_signal$olfactory_type == "trichoid" & mean_counts_olf_signal$signal == "chemical"])/1e8, digits = 1)`) \times 10^9$ for visual and chemical signalers, respectively. 
-
-The fraction of sensilla of each type also did not differ between fireflies of different signaling strategies. Fig. \@ref(fig:fraction)a shows the fraction of mechanosensory and olfactory sensilla split between visual and chemical signalers, and Fig. \@ref(fig:fraction)c as well as the fraction of basiconica, trichodea, and capitular sensilla as a fraction of total olfactory sensilla. 
+The type of olfactory sensilla were also not different between signaling strategies. Mean numbers of basiconica sensilla per segment were $(`r signif(mean(mean_counts_olf_signal$means[mean_counts_olf_signal$olfactory_type == "basiconica" & mean_counts_olf_signal$signal == "visual"])/1e7, digits = 3)` \pm `r signif(sd(mean_counts_olf_signal$means[mean_counts_olf_signal$olfactory_type == "basiconica" & mean_counts_olf_signal$signal == "visual"])/1e7, digits = 1)`) \times 10^8$ and $(`r signif(mean(mean_counts_olf_signal$means[mean_counts_olf_signal$olfactory_type == "basiconica" & mean_counts_olf_signal$signal == "chemical"])/1e8, digits = 3)` \pm `r signif(sd(mean_counts_olf_signal$means[mean_counts_olf_signal$olfactory_type == "basiconica" & mean_counts_olf_signal$signal == "chemical"])/1e8, digits = 1)`) \times 10^9$ for visual and chemical signalers, respectively. For trichodea sensilla, the means were $(`r signif(mean(mean_counts_olf_signal$means[mean_counts_olf_signal$olfactory_type == "trichoid" & mean_counts_olf_signal$signal == "visual"])/1e7, digits = 3)` \pm `r signif(sd(mean_counts_olf_signal$means[mean_counts_olf_signal$olfactory_type == "trichoid" & mean_counts_olf_signal$signal == "visual"])/1e7, digits = 1)`) \times 10^8$ and $(`r signif(mean(mean_counts_olf_signal$means[mean_counts_olf_signal$olfactory_type == "trichoid" & mean_counts_olf_signal$signal == "chemical"])/1e8, digits = 3)` \pm `r signif(sd(mean_counts_olf_signal$means[mean_counts_olf_signal$olfactory_type == "trichoid" & mean_counts_olf_signal$signal == "chemical"])/1e8, digits = 1)`) \times 10^9$ for visual and chemical signalers, respectively.
+Furthermore, the fraction of sensilla of each type also did not differ between fireflies of different signaling strategies.
 
 
 ## Sex does not affect sensilla morphometrics or arrangements
@@ -347,27 +350,65 @@ When sex and signal are taken into account, such as the breakdown of these categ
 
 Sensillum and antenna morphometrics play a role in the capture of odorant molecules from the surrounding air by influencing the flow of air over sensory structures and providing surface area for sensory structures. Despite the arrangement and structure of olfactory sensilla being important for odorant capture in other organisms, our study shows that various measurements of sensilla do not appear to differ between fireflies with different signaling strategies. Visual and chemical signaling species have the same size and length of olfactory sensilla, as well as the same densities, mean distances between sensilla, and total estimated counts of sensilla. Maintenance of these arrangements will influence total capture surface area as well as the fluid flow through these structures. 
 
-Our result stand in contrast to several studies on sensory structures of firefly antennae which have found significant differences in sensilla between species that have primary visual or chemical signaling strategies. @pacheco2024antennal found similar results on total counts of chemosensory sensilla between three diurnal and four nocturnal species but significantly more dense sensilla between these types. Our study included only one female specimen of chemical signaling species, making a direct comparison not possible. However, males of chemical signaling species showed lower numbers of olfactory sensilla overall and basiconica sensilla and low variation than the lone female specimen (Fig. \@ref(fig:counts-signal-sex)b). 
+Our result stand in contrast to several studies on sensory structures of firefly antennae which have found significant differences in sensilla between species that have primary visual or chemical signaling strategies. Pacheco et al. @pacheco2024antennal found similar results on total counts of chemosensory sensilla between three diurnal and four nocturnal species but significantly more dense sensilla between these types. Our study included only one female specimen of chemical signaling species, making a direct comparison not possible. However, males of chemical signaling species showed lower numbers of olfactory sensilla overall and basiconica sensilla and low variation than the lone female specimen (Fig. \@ref(fig:counts-signal-sex)b). 
 
 Our study focused on the morphometrics of these structures, including the widths, lengths, densities, and mean distances between sensilla that would influence fluid flow over and odor capture by the antenna. Our results suggest that that the selective forces surrounding the maintenance of these arrangements may be heavier than the effects of sexual selection. Sensilla on firefly antennae serve several functions beyond sex pheromone detection, such as the detection of plant volatiles, aggregation pheromones, and moisture [@keil1984mechanosensitive; @lopes2002fine; @pacheco2024antennal]. It is possible that sensilla morphometrics and arrangements are under different selective pressures than simply sexual selection driving differences between species or between sexes, as are many examples of elaborate traits [@rubin2023sexual]. Olfactory sensilla in terrestrial pancrustanceans tend to be reduced to similar sizes and shapes, being short and peg-like or leaf-like [@stensmyr2005insect, @waldrop2016hermitcrab]. This indicates that the interaction between fluid containing odorant molecules and sensory structures may be similar across species. The antennal form exhibited by fireflies could represent the smallest, most compact, and inexpensive way to create and maintain arrays of olfactory sensilla. 
 
-Additionally, denser arrays do not necessarily translate to greater sensor sensitivity due to the physics of odorant capture. @Loudon2000 demonstrated that silkworm antennae are so dense that active ventilation is required for the inner-most sensilla to be exposed to air containing new odorant samples, and the structure of these antennae divert air currents through the dense array [@loudon2005divergence]. This has been observed for waterborne creatures such as crabs and has been shown more generally in computational modeling of odorant capture by hair arrays [@waldrop2016bluehermit; @waldrop2018entmodel]. 
+Additionally, denser arrays do not necessarily translate to greater sensor sensitivity due to the physics of odorant capture. Loudon et al. @Loudon2000 demonstrated that silkworm antennae are so dense that active ventilation is required for the inner-most sensilla to be exposed to air containing new odorant samples, and the structure of these antennae divert air currents through the dense array [@loudon2005divergence]. This has been observed for waterborne creatures such as crabs and has been shown more generally in computational modeling of odorant capture by hair arrays [@waldrop2016bluehermit; @waldrop2018entmodel]. 
 
-However, few sensilla types and their functions are well characterized across the species in this study. Recent work by @pacheco2024antennal characterized sensilla and found several new types as well as the observation that diurnal species had three to five types of chemoreceptor sensilla compared to 1-3 on nocturnal species. Many of these sensilla have unknown target-odor receptors. The specific function of olfactory sensilla types are not well known for most fireflies, so it is unknown whether the olfactory sensilla of either basiconica or trichodea are specifically tuned to sex pheromones and would therefore be under pressure from sexual selection. These olfactory sensilla could be used for general olfactory tasks other than sex pheromone signaling and would therefore not be expected to differ. It is likely that the specificity of some sensilla types to pheromones mediating reproductive efforts is more important that the overall counts, arrangement, and morphometrics of olfactory sensilla overall. 
+However, few sensilla types and their functions are well characterized across the species in this study. Recent work by Pacheco et al. @pacheco2024antennal characterized sensilla and found several new types as well as the observation that diurnal species had three to five types of chemoreceptor sensilla compared to 1-3 on nocturnal species. Many of these sensilla have unknown target-odor receptors. The specific function of olfactory sensilla types are not well known for most fireflies, so it is unknown whether the olfactory sensilla of either basiconica or trichodea are specifically tuned to sex pheromones and would therefore be under pressure from sexual selection. These olfactory sensilla could be used for general olfactory tasks other than sex pheromone signaling and would therefore not be expected to differ. It is likely that the specificity of some sensilla types to pheromones mediating reproductive efforts is more important that the overall counts, arrangement, and morphometrics of olfactory sensilla overall. 
 
-Furthermore, the presence of a particular type of sensilla may not indicate physiological function.  @lower2023identification found that basiconica sensilla on the antennae of male *Photinus corruscus* responded to to the candidate sex pheromone (1*S*)-*exo*-3-hydroxycamphor produced by females, the first confirmation of a sex pheromone in a firefly. *P. corruscus* is a diurnal species with females presumably using sex pheromones to attract mates. However, the same type of basiconica sensilla were found on the antennae of both male and female *P. corruscus* by @pacheco2024antennal, suggesting that females possess the same sensilla that react to sex pheromones but either they are not physiologically active or these signals are ignored. Either way, sexual dimorphism in the relevant sensilla would not be observable, consistent with the results of our study. 
+Furthermore, the presence of a particular type of sensilla may not indicate physiological function.  Lower et al. @lower2023identification found that basiconica sensilla on the antennae of male *Photinus corruscus* responded to to the candidate sex pheromone (1*S*)-*exo*-3-hydroxycamphor produced by females, the first confirmation of a sex pheromone in a firefly. *P. corruscus* is a diurnal species with females presumably using sex pheromones to attract mates. However, the same type of basiconica sensilla were found on the antennae of both male and female *P. corruscus* by Pacheco et al. @pacheco2024antennal, suggesting that females possess the same sensilla that react to sex pheromones but either they are not physiologically active or these signals are ignored. Either way, sexual dimorphism in the relevant sensilla would not be observable, consistent with the results of our study. 
 
 Further study is needed to determine the extent to which firefly antennae differ when using visual or chemical signaling strategies to find conspecific mates at a distance. This work focused on wide taxonomic sampling but in a limited number of specimens per species. This limits the statistical power of the study, although we found remarkably similar measurements across the species studied. Results were also limited by small number of females in the sample to make strong conclusions on dimorphic traits within chemical signalers. Additionally, computational studies of odor capture would be a useful way to determine whether or not small differences in morphometrics, density, and arrangement of sensilla would impact the overall signal experienced by individuals. 
 
+
+# Funding
+
+This material is based upon work supported by, or in part by, the U.S. Army Research Office under contract number #W911NF2210037. 
+
+# Acknowledgements
+
+The authors would like to thank Brian Brown (Los Angeles County Natural History Museum) for the initial hypothesis and his generous assistance with specimens; Karen Ngo and Anne Wilber for their help collecting data; and Molla Islam for assistance with scanning electron microscopy. 
+
+# Conflicts of Interest
+
+The authors have no conflicts to declare.
+
+
+# References
+
+<div id="refs">
+</div>
+
 \newpage
+
+# Tables 
+
+
+```{r signal-ptable, message=FALSE, warning=FALSE}
+kable(tab_signal_df, "simple",
+      digits = 3, align = "c",
+      #row.names = tab_row_names,
+      col.names = tab_col_names,
+      caption = "Phylogenetically corrected $p$-value comparisons of species means against signal type. Number of species in the comparison ($n$) is noted in parentheses beside each value.")
+```
+
+
+```{r sex-ptable, message=FALSE, warning=FALSE}
+kable(tab_sex_df, "simple",
+      digits = 3, align = "c",
+      #row.names = tab_row_names,
+      col.names = tab_col_names,
+      caption = "Phylogenetically corrected $p$-value comparisons of individuals against sex. Number of individuals in the comparison ($n$) is noted in parentheses beside each value.")
+```
+
+
 
 # Figures
 
-```{r sem-fig, echo=FALSE, warning=FALSE, message=FALSE, fig.cap="a. Scanning electron micrograph (SEM) of ventral side of the antenna of \\textit{Photinus macdermotti}, showing antenna with labeled scape, pedicle, and flagellomeres 1 -- 9. b. SEM of ventral side of F1 segment of \\textit{Lucidota} sp. specimen LACM Ent 574192 show locations of width measurements on mechanosensory sensilla (A, B, C in green) and olfactory sensilla (B in gold). trichodea (T) and basiconica (W) olfactory sensilla are also marked in white."}
-ggdraw() + draw_image("./doc/figures/figure1/SEM_fig.png")
-```
 
-```{r bug-tree, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4.5, fig.width=7.5, fig.cap="a. Phylogenetic tree of 26 species with colors indicating sexual signaling strategy for that species. b. Dorsal view of \\textit{Lucidota} sp. specimen LACM Ent 574192. c. Ventral view of \\textit{Photinus consanguineus} specimen NCC Ent 10."}
+```{r bug-tree, echo=FALSE, warning=FALSE, message=FALSE, fig.height=9.0, fig.width=7.5, fig.cap="a. Scanning electron micrograph (SEM) of ventral side of the antenna of \\textit{Photinus macdermotti}, showing antenna with labeled scape, pedicle, and flagellomeres 1 -- 9. b. SEM of ventral side of F1 segment of \\textit{Lucidota} sp. specimen LACM Ent 574192 show locations of width measurements on mechanosensory sensilla (A, B, C in green) and olfactory sensilla (B in gold). trichodea (T) and basiconica (W) olfactory sensilla are also marked in white. c. Phylogenetic tree of 26 species with colors indicating sexual signaling strategy for that species. d. Dorsal view of \\textit{Lucidota} sp. specimen LACM Ent 574192. e. Ventral view of \\textit{Photinus consanguineus} specimen NCC Ent 10."}
 
 p_tree <- ggtree(bug_tree_2) + 
   geom_tiplab(offset = 0.04) + 
@@ -376,15 +417,23 @@ p_tree <- ggtree(bug_tree_2) +
   scale_fill_manual(values = signal_colors) +
   ggplot2::xlim(0,2) +
   theme(legend.position = "bottom")
-p_pic1 <- ggdraw() + draw_image("./doc/figures/figure2/Lucidota_sp.JPG")
-p_pic2 <- ggdraw() + draw_image("./doc/figures/figure2/Photinus_consanguineus.JPG")
-p_tree + (p_pic1 / p_pic2) +
-  plot_layout(widths = c(5, 1)) +
-  plot_annotation(tag_levels = "a") & theme(plot.tag = element_text(color = "black", 
+p_pic1 <- ggdraw() + draw_image("./doc/figures/figure1/Lucidota_sp.JPG")
+p_pic2 <- ggdraw() + draw_image("./doc/figures/figure1/Photinus_consanguineus.JPG")
+
+design <- "
+AAAAAA
+AAAAAA
+BBBBBC
+BBBBBD
+"
+free(ggdraw() + draw_image("./doc/figures/figure1/SEM_fig.png") + plot_layout(tag_level = "new") )+
+  p_tree + p_pic1 + p_pic2 +
+  plot_layout(design = design) +
+  plot_annotation(tag_levels = list(c("c", "d" ,"e"))) & theme(plot.tag = element_text(color = "black", 
                                                                     face = "plain"))
 if(save_figs) {
-  dir.create("./doc/figures/figure2/", showWarnings = F)
-  ggsave("./doc/figures/figure2/bug_tree.pdf", last_plot(), height = 4.5, width = 7.5)
+  dir.create("./doc/figures/figure1/", showWarnings = F)
+  ggsave("./doc/figures/figure1/bug_tree.pdf", last_plot(), height = 9.0, width = 7.5)
 }
 ```
 
@@ -408,8 +457,8 @@ p_signal_counts <- test_all_counts_signal$plot +
                                           plot.tag = element_text(vjust = 2))
 
 if(save_figs){
-  dir.create("./doc/figures/figure3/", showWarnings = F)
-  ggsave("./doc/figures/figure3/signal-plots.pdf", last_plot(), 
+  dir.create("./doc/figures/figure2/", showWarnings = F)
+  ggsave("./doc/figures/figure2/signal-plots.pdf", last_plot(), 
          height = 5.5, width = 6.5)
 }
 ```
@@ -441,50 +490,8 @@ p_boxplot + p_count_tree +
   plot_annotation(tag_levels = "a")
 
 if(save_figs){
-  dir.create("./doc/figures/figure4/", showWarnings = F)
-  ggsave("./doc/figures/figure4/count-plots.pdf", last_plot(), height = 4.25, width = 6.5)
-}
-```
-
-```{r trichoid-fig, message=FALSE, warning=FALSE, fig.height=3.5, fig.width=6.5, fig.cap="Mean number of olfactory sensilla per flagellar segment by type, signal, and sex. a. Olfactory sensilla of each type (basiconica, trichodea, and capitular) for each type grouped by signaling strategy. b. Olfactory sensilla of each type (basiconica, trichodea, and capitular) for each type grouped by sex."}
-p_olf_counts_signal <- test_olf_counts_signal$plot + 
-  scale_fill_manual(values = signal_colors) + 
-  ylab("Mean number of sensilla\nper segment") + 
-  theme(legend.position = "bottom") 
-p_olf_counts_sex <- test_olf_counts_sex$plot + 
-  scale_fill_manual(values = sex_colors) + 
-  ylab("Mean number of sensilla\nper segment")+ 
-  theme(legend.position = "bottom")
-
-p_olf_counts_signal + p_olf_counts_sex +plot_annotation(tag_levels = "a")
-
-if(save_figs){
-  dir.create("./doc/figures/figure5/", showWarnings = F)
-  ggsave("./doc/figures/figure5/trichoid-plots.pdf", last_plot(), height = 3.5, width = 6.5)
-}
-```
-
-```{r fraction, message=FALSE, warning=FALSE, fig.width = 6.5, fig.height = 4.5, fig.cap="Fraction of mechanosensory and olfactory sensillum coverage on the antennae.  a,b: Fraction of mechanosensory or olfactory sensilla by sexual signaling strategy (a) and sex (b). c,d: Fraction of olfactory sensilla by type coverage on the antennae by sexual signaling strategy (c) and sex (d)."}
-
-p_frac_signal <- test_all_fractions_signal$plot + 
-  scale_fill_manual(values = sensillum_colors, name = "Sensillum type")
-  
-p_frac_sex <- test_all_fractions_sex$plot + 
-  scale_fill_manual(values = sensillum_colors, name = "Sensillum type")
-
-p_frac_signal_olf <- test_olf_fractions_signal$plot +
-  scale_fill_manual(values = olfactory_colors, name = "Specialized\ntype")
-p_frac_sex_olf <- test_olf_fractions_sex$plot + 
-  scale_fill_manual(values = olfactory_colors, name = "Specialized\ntype")
-
-
-(p_frac_signal + p_frac_sex + plot_layout(guides = "collect") & theme(legend.position = "right")) / 
-  (p_frac_signal_olf + p_frac_sex_olf + plot_layout(guides = "collect")) + 
-  plot_annotation(tag_levels = "a") 
-
-if(save_figs){
-  dir.create("./doc/figures/figure6/", showWarnings = F)
-  ggsave("./doc/figures/figure6/fraction-plots.pdf", last_plot(), height = 4.5, width = 6.5)
+  dir.create("./doc/figures/figure3/", showWarnings = F)
+  ggsave("./doc/figures/figure3/count-plots.pdf", last_plot(), height = 4.25, width = 6.5)
 }
 ```
 
@@ -512,8 +519,8 @@ p_sex_counts <- test_all_counts_sex$plot +
                                             plot.tag = element_text(vjust = 2))
 
 if(save_figs){
-  dir.create("./doc/figures/figure7/", showWarnings = F)
-  ggsave("./doc/figures/figure7/sex-plots.pdf", last_plot(), height = 5.5, width = 6.5)
+  dir.create("./doc/figures/figure4/", showWarnings = F)
+  ggsave("./doc/figures/figure4/sex-plots.pdf", last_plot(), height = 5.5, width = 6.5)
 }
 ```
 
@@ -576,43 +583,9 @@ p_f4_basiconica <- ggplot(compare_means_olf[compare_means_olf$olfactory_type == 
   plot_layout(guides = "collect") & theme(legend.position = "bottom")
 
 if(save_figs){
-  dir.create("./doc/figures/figure8/", showWarnings = F)
-  ggsave("./doc/figures/figure8/breakdown-plots.pdf", last_plot(), height = 5.5, width = 6.5)
+  dir.create("./doc/figures/figure5/", showWarnings = F)
+  ggsave("./doc/figures/figure5/breakdown-plots.pdf", last_plot(), height = 5.5, width = 6.5)
 }
 ```
 
 
-# Tables 
-
-```{r bug-tab, echo = FALSE}
-specimen_tab <- specimen_data[,c(1,2,4,5,6)]
-sp_tab_col_names <- c("Specimen ID", "Species", "Signal", 
-                      "Sex", "Body length (mm)")
-
-kable(specimen_tab, "simple",
-      digits = 1,
-      align = c("l", "l", "c", "c", "c"),
-      col.names = sp_tab_col_names,
-      caption ="Specimens used in analysis from the Los Angeles County Natural History Museum (LACM). Specimen ID is a specimen number unless BPC (Brian Brown personal collection) or NCC (individual specimens in the LACM collection not yet given a specimen number). ")
-```
-
-```{r signal-ptable, message=FALSE, warning=FALSE}
-kable(tab_signal_df, "simple",
-      digits = 3, align = "c",
-      #row.names = tab_row_names,
-      col.names = tab_col_names,
-      caption = "Phylogenetically corrected $p$-value comparisons of species means against signal type. Number of species in the comparison ($n$) is noted in parentheses beside each value.")
-```
-
-
-```{r sex-ptable, message=FALSE, warning=FALSE}
-kable(tab_sex_df, "simple",
-      digits = 3, align = "c",
-      #row.names = tab_row_names,
-      col.names = tab_col_names,
-      caption = "Phylogenetically corrected $p$-value comparisons of individuals against sex. Number of individuals in the comparison ($n$) is noted in parentheses beside each value.")
-```
-
-\newpage
-
-# References
